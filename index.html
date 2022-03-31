@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <title>Wheather app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="form">
+      <div class="container">
+        <div class="app-title">
+          <p>Weather</p>
+        </div>
+     
+          <div class="wrap">
+            <div id="newtask"class="search">
+              <input
+                type="text"
+                id="city"
+                class="searchTerm"
+                placeholder="search"
+              />
+              <button id="send" type="submit" class="searchButton">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+         
+          <div id="tasks"></div>
+            <p id="message"></p>
+          </div>
+         
+          </div>
+         
+          </div>
+        </div>
+     
+    <script src="api.js"></script>
+  </body>
+</html>
