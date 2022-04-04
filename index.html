@@ -7,39 +7,50 @@
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
     <title>Wheather app</title>
     <link rel="stylesheet" href="style.css" />
+    <style>
+      @media only screen and (max-width: 500px) {
+        /* For mobile phones: */
+        .menu,
+        .main,
+        .right {
+          width: 100%;
+        }
+      }
+    </style>
   </head>
   <body>
-    <div class="form">
+    <div>
       <div class="container">
-        <div class="app-title">
-          <p>Weather</p>
+        <div>
+          <div class="app-title"><h1>Weather</h1></div>
         </div>
-     
-          <div class="wrap">
-            <div id="newtask"class="search">
-              <input
-                type="text"
-                id="city"
-                class="searchTerm"
-                placeholder="search"
-              />
-              <button id="send" type="submit" class="searchButton">
-                <i class="fas fa-search"></i>
-              </button>
-            </div>
-          </div>
-         
-          <div id="tasks"></div>
-            <p id="message"></p>
-          </div>
-         
-          </div>
-         
+        <div class="wrap">
+          <div id="newtask" class="search">
+            <input
+              type="text"
+              id="city"
+              class="searchTerm"
+              placeholder="search"
+            />
+            <button id="send" type="submit">
+              <i class="fas fa-search"></i>
+            </button>
           </div>
         </div>
-     
-    <script src="api.js"></script>
+      </div>
+
+      <div id="tasks">
+        <h6 id="message"></h6>
+      </div>
+    </div>
+    <script src="new.js"></script>
   </body>
 </html>
