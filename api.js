@@ -1,38 +1,35 @@
 // // api key : 82565a74ce3e39072e71ac0895d785d9
-function getWeathername(cityName) {
+async function getWeathername(cityName) {
   const url = `http://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=82565a74ce3e39072e71ac0895d785d9&units=metric`;
-  axios
+  this.apiResp = await axios
     .get(url)
     .then(function (response) {
-      // handle success
-      document.getElementById(
-        "message"
-      ).innerText = `it is now ${response.data.main.temp}°C`;
+      //   alert(arr);
+      for (var i = 0; i <= 3; i++) {
+        if(){}
+        document.querySelector("#tasks").innerHTML += `
+          <div class="div-shadow">
+              <span id="send">
+              Temperature:${response.data.main.temp}°C <br>
+               City: ${document.querySelector("#city").value}
+              </span>
+         </div>
+        `;
+        cacheData.push(response);
+      }
+
+      console.log(cacheData);
+      // return response;
     })
     .catch(function (error) {
       // document.getElementById("message").value;
       alert("please enter the valid city name");
     });
-  document.querySelector("#tasks").innerHTML += `
-      <div class="task">
-          <span id="taskname">
-              ${document.querySelector("#newtask input")}
-          </span>
-          <button class="delete">
-              <i class="far fa-trash-alt"></i>
-          </button>
-      </div>
-  `;
-
-  var current_tasks = document.querySelectorAll(".delete");
-  for (var i = 0; i < current_tasks.length; i++) {
-    current_tasks[i].onclick = function () {
-      this.parentNode.remove();
-    };
-  }
 }
 
 window.onload = function () {
+  cacheData = [];
+  var apiResp;
   document.getElementById("send").onclick = function () {
     const cityName = document.getElementById("city").value;
     if (document.getElementById("city").value.trim() !== "") {
