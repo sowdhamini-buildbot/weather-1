@@ -15,25 +15,14 @@
     />
     <title>Wheather app</title>
     <link rel="stylesheet" href="style.css" />
-    <style>
-      @media only screen and (max-width: 500px) {
-        /* For mobile phones: */
-        .menu,
-        .main,
-        .right {
-          width: 100%;
-        }
-      }
-    </style>
   </head>
   <body>
     <div>
-      <div class="container">
-        <div>
-          <div class="app-title"><h1>Weather</h1></div>
-        </div>
         <div class="wrap">
           <div id="newtask" class="search">
+            <div class="app-title">
+              <h1>Weather</h1>
+            </div>
             <input
               type="text"
               id="city"
@@ -46,7 +35,6 @@
           </div>
         </div>
       </div>
-
       <div id="tasks">
         <h6 id="message"></h6>
       </div>
@@ -54,3 +42,4 @@
     <script src="new.js"></script>
   </body>
 </html>
+
